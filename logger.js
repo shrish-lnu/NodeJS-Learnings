@@ -15,7 +15,6 @@ logger.on('info', (msg) => write('INFO', msg));
 logger.on('warn', (msg) => write('WARN', msg));
 logger.on('error', (msg) => write('ERROR', msg));
 
-// shortcuts: logger.info('hi') is the same as logger.emit('info', 'hi')
 logger.info = (msg) => logger.emit('info', msg);
 logger.warn = (msg) => logger.emit('warn', msg);
 logger.error = (msg) => logger.emit('error', msg);

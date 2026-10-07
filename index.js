@@ -20,7 +20,7 @@ const files = fs.readdirSync(folder);
 for (const file of files) {
   const filePath = path.join(folder, file);
 
-  if (fs.statSync(filePath).isDirectory()) continue; // skip folders
+  if (fs.statSync(filePath).isDirectory()) continue;
 
   const ext = path.extname(file).slice(1) || 'other';
   const newFolder = path.join(folder, ext);
