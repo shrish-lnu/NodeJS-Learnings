@@ -3,8 +3,8 @@
 
 const fs = require('fs');
 
-// --- 1. Callback (old way) ---
-// Works, but gets messy when you nest more operations inside
+// 1. Callback (old way)
+// Works, but gets messy when we nest more operations inside
 
 function readWithCallback() {
   fs.readFile('day2/sample.txt', 'utf8', (err, data) => {
@@ -16,7 +16,7 @@ function readWithCallback() {
   });
 }
 
-// --- 2. Promise (wrapping callback ourselves) ---
+// 2. Promise (wrapping callback ourselves) 
 
 function readWithPromise() {
   const readFile = (filePath) => {
@@ -33,7 +33,7 @@ function readWithPromise() {
     .catch((err) => console.error('Promise error:', err.message));
 }
 
-// --- 3. Async/Await (cleanest way) ---
+// 3. Async/Await (cleanest way)
 
 async function readWithAsyncAwait() {
   try {
