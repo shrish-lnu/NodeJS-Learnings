@@ -124,3 +124,17 @@ PATCH applies a partial update. Only provided fields are changed. Others stay as
 Example: a task has title, description, status, priority.
 - PUT without description resets description to ""
 - PATCH without description leaves description unchanged
+
+## WHAT I LEARNT TODAY:
+
+1. Building REST APIs with Express.js
+2. Understanding the Request Lifecycle
+3. Middleware: CORS, JSON parsing, Request ID
+4. HTTP Request Logging -> Morgan for HTTP request logging andd Customer Logger for application-level logging
+5. Rate Limiting
+6. Request Validation with Zod
+7. Seaparating Validation from Business Logic (Request-> Validator-> Controller -> Service)
+8. Controller vs Service
+9. Using an In-Memory Map as a Data Store
+10. UUIDs/Resource IDs
+11. CRUD Operations
