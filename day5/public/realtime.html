@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Live Updates</title>
+  <!-- Socket.IO client is served automatically by the server at /socket.io/socket.io.js -->
+  <script src="/socket.io/socket.io.js"></script>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    #status { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
+    #status.connected { color: green; }
+    #events { border: 1px solid #ddd; border-radius: 6px; overflow: hidden; }
+    .event { padding: 0.6rem 1rem; border-bottom: 1px solid #eee; font-size: 0.85rem; }
+    .event:last-child { border-bottom: none; }
+    .event .time { color: #999; margin-right: 0.5rem; }
+    .event .name { font-weight: bold; margin-right: 0.5rem; }
+    .task\:created .name { color: #2e7d32; }
+    .task\:updated .name { color: #1565c0; }
+    .task\:deleted .name { color: #c62828; }
+    #empty { padding: 1rem; color: #999; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Task Live Updates</h1>
+  <p id="status">Connecting…</p>
+  <div id="events"><p id="empty">Waiting for events. Create, update or delete a task via the API.</p></div>
+
+  <script src="/realtime.js"></script>
+</body>
+</html>
